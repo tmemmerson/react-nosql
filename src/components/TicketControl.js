@@ -6,7 +6,7 @@ import EditTicketForm from "./EditTicketForm";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import * as a from "./../actions";
-import { withFirestore } from "react-redux-firebase";
+import { withFirestore, isLoaded } from "react-redux-firebase";
 
 class TicketControl extends React.Component {
   constructor(props) {
@@ -84,6 +84,7 @@ class TicketControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
+
     if (this.state.editing) {
       currentlyVisibleState = (
         <EditTicketForm
