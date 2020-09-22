@@ -14,6 +14,7 @@ function Header() {
   return (
     <React.Fragment>
       <HelpQueueHeader>{headerText}</HelpQueueHeader>
+
       <ul>
         <li>
           <Link to="/">Home</Link>
